@@ -25,11 +25,11 @@ describe('ProductPackage', () => {
         expect(productPackage.hasTv()).toBe(true);
     });
 
-    // xit('should create a product package with internet, VoIP, and TV', () => {
-    //     const productPackage = new ProductPackage("100MB", 91233788, ["LaLiga", "Estrenos"]);
+    it('should create a product package with internet, VoIP, and TV', () => {
+        const productPackage = ProductPackage.createWithInternetVoIPAndTv("100MB", 91233788, ["LaLiga", "Estrenos"]);
 
-    //     expect(productPackage.hasInternet()).toBe(true);
-    //     expect(productPackage.hasVOIP()).toBe(true);
-    //     expect(productPackage.hasTv()).toBe(true);
-    // });
+        expect(productPackage.hasInternet()).toBe(true);
+        expect(productPackage.hasVOIP()).toBe(true);
+        expect(productPackage.hasTv()).toBe(true);
+    });
 });
