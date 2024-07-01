@@ -9,13 +9,13 @@ describe('ProductPackage', () => {
         expect(productPackage.hasTv()).toBe(false);
     });
 
-    // xit('should create a product package with internet and VoIP', () => {
-    //     //const productPackage = new ProductPackage("100MB", 91233788);
+    it('should create a product package with internet and VoIP', () => {
+        const productPackage = ProductPackage.createWithInternetAndVoIP("100MB", 446396635544);
 
-    //     expect(productPackage.hasInternet()).toBe(true);
-    //     expect(productPackage.hasVOIP()).toBe(true);
-    //     expect(productPackage.hasTv()).toBe(false);
-    // });
+        expect(productPackage.hasInternet()).toBe(true);
+        expect(productPackage.hasVOIP()).toBe(true);
+        expect(productPackage.hasTv()).toBe(false);
+    });
 
     // xit('should create a product package with internet and TV', () => {
     //     const productPackage = new ProductPackage("100MB", ["LaLiga", "Estrenos"]);
