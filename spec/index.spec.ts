@@ -32,4 +32,12 @@ describe('ProductPackage', () => {
         expect(productPackage.hasVOIP()).toBe(true);
         expect(productPackage.hasTv()).toBe(true);
     });
+
+    it('should create a product package only mobile and internet', () => {
+        const productPackage = ProductPackage.createWithMobileAndInternet("100MB", 91233788);
+
+        expect(productPackage.hasInternet()).toBe(true);    
+        expect(productPackage.hasMobile()).toBe(true);
+        expect(productPackage.hasVOIP()).toBe(false);
+    })
 });
