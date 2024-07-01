@@ -39,5 +39,14 @@ describe('ProductPackage', () => {
         expect(productPackage.hasInternet()).toBe(true);    
         expect(productPackage.hasMobile()).toBe(true);
         expect(productPackage.hasVOIP()).toBe(false);
+    });
+
+    it('should create a product package mobile, VoIP and internet', () => {
+        const productPackage = ProductPackage.createWithMobileInternetAndTv("100MB", 91233788, ["LaLiga", "Estrenos"]);
+
+        expect(productPackage.hasInternet()).toBe(true);    
+        expect(productPackage.hasMobile()).toBe(true);
+        expect(productPackage.hasTv()).toBe(true);
+        expect(productPackage.hasVOIP()).toBe(false);
     })
 });
